@@ -1,16 +1,88 @@
-# React + Vite
+# 🍽️ Recipe App – TODO List
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A smart, personalized recipe application that helps users store, discover, and generate recipes based on their preferences and available ingredients.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✅ Core Recipe Creation
+- [ ] Users can add their own recipes
+  - [ ] Text-based recipe input
+  - [ ] Image upload
+  - [ ] Video upload
+- [ ] Manual step-by-step recipe creation
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 📦 Recipe Storage & Organization
+- [ ] Personal recipe library
+- [ ] Save recipes from external sources
+- [ ] Standardized recipe format
+  - Ingredients
+  - Cooking steps
+  - Cooking time
+  - Difficulty level
+  - Tags / categories
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🔍 Search & Filtering
+- [ ] Search recipes by name
+- [ ] Search recipes by ingredients
+- [ ] Filtering options
+  - [ ] Spice level
+  - [ ] Cuisine type
+  - [ ] Dietary preferences (future)
+
+---
+
+## 🤖 Smart Recipe Suggestions
+- [ ] Suggest recipes based on entered ingredients
+- [ ] Suggest recipes based on fridge contents
+- [ ] Prioritize recipes with fewer missing ingredients
+
+---
+
+## 🧊 Ingredient Management (Fridge)
+- [ ] Fridge ingredient list
+- [ ] Add / remove ingredients
+- [ ] Track available ingredients
+- [ ] Use fridge data for recommendations
+
+---
+
+## ⚙️ Automation & AI
+- [ ] Convert scraped recipes into app format
+- [ ] Auto-extract ingredients from text / images / videos
+- [ ] Normalize ingredient names and measurements
+
+---
+
+## 👤 Personalization & Social
+- [ ] Personalized recipe feed
+- [ ] Social-style recipe book
+- [ ] Share recipes with others
+- [ ] Save / favorite recipes
+
+---
+
+## 📱 Platform & Deployment
+- [ ] Mobile application
+  - [ ] Android
+  - [ ] iOS
+- [ ] User authentication
+- [ ] Cloud database
+- [ ] Cross-device sync
+
+---
+
+## 🚀 Future Enhancements
+- [ ] Auto-generated shopping list
+- [ ] Meal planning
+- [ ] Cooking timers & reminders
+- [ ] Nutrition breakdown
+
+---
+
+## 🛠️ Status
+Project is currently in **planning / MVP definition phase**.
+
