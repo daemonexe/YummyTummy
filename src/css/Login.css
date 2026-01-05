@@ -1,0 +1,279 @@
+/* ---------- GLOBAL RESET ---------- */
+:root {
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  overflow: hidden;
+}
+
+/* ---------- PAGE ---------- */
+.loginPage {
+  width: 100%;
+  height: 100dvh;
+  position: relative;
+  overflow: hidden;
+
+  background-image: url("https://github.com/daemonexe/daemonexe/blob/main/cook-iamge.jpg?raw=true");
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-end;
+}
+
+/* ---------- WALLPAPER OVERLAY ---------- */
+.loginWallpaperOverlay {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 10%, rgba(255,255,255,0.12), transparent 55%),
+    linear-gradient(180deg, rgba(0,0,0,0.25), rgba(0,0,0,0.55));
+  pointer-events: none;
+}
+
+/* ---------- TOP LEFT BRAND ---------- */
+.loginHeader {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 14px 16px;
+  border-radius: 18px;
+
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.22);
+
+  backdrop-filter: blur(18px) saturate(140%);
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
+
+  box-shadow:
+    0 14px 40px rgba(0,0,0,0.35),
+    inset 0 1px 0 rgba(255,255,255,0.25);
+}
+
+.loginHeaderLogo {
+  width: 46px;
+  height: 46px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  font-size: 22px;
+
+  background: rgba(255,255,255,0.14);
+  border: 1px solid rgba(255,255,255,0.22);
+}
+
+.loginHeaderTitle {
+  margin: 0;
+  font-size: 22px;
+  color: rgba(255,255,255,0.95);
+}
+
+.loginHeaderMotto {
+  margin: 2px 0 0;
+  font-size: 13px;
+  color: rgba(255,255,255,0.78);
+}
+
+/* ---------- LOGIN CARD (RIGHT HALF) ---------- */
+.loginCard {
+  position: relative;
+  z-index: 2;
+
+  width: 50vw;                 /* HALF SCREEN */
+  max-width: 640px;            /* prevents too wide on big monitors */
+  min-width: 420px;
+
+  height: 100%;
+  padding: 32px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  background: rgba(255,255,255,0.14);
+  border-left: 1px solid rgba(255,255,255,0.22);
+
+  backdrop-filter: blur(22px) saturate(140%);
+  -webkit-backdrop-filter: blur(22px) saturate(140%);
+
+  box-shadow:
+    -30px 0 80px rgba(0,0,0,0.35),
+    inset 1px 0 0 rgba(255,255,255,0.25);
+}
+
+/* subtle glass highlight */
+.loginCard::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(255,255,255,0.22),
+    rgba(255,255,255,0.04),
+    rgba(255,255,255,0.16)
+  );
+  pointer-events: none;
+}
+
+/* ---------- CARD CONTENT ---------- */
+.loginCardTitle {
+  font-size: 28px;
+  margin: 0 0 14px;
+  color: rgba(255,255,255,0.95);
+}
+
+/* ---------- FORM ---------- */
+.loginForm {
+  display: grid;
+  gap: 12px;
+  max-width: 420px;
+}
+
+.loginLabel {
+  font-size: 13px;
+  color: rgba(255,255,255,0.85);
+}
+
+.loginInput {
+  padding: 14px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.22);
+  background: rgba(255,255,255,0.12);
+  color: rgba(255,255,255,0.95);
+  outline: none;
+
+  backdrop-filter: blur(12px);
+}
+
+.loginInput::placeholder {
+  color: rgba(255,255,255,0.65);
+}
+
+.loginInput:focus {
+  border-color: rgba(255,255,255,0.45);
+  box-shadow: 0 0 0 3px rgba(255,255,255,0.12);
+}
+
+.loginRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.loginCheckbox {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-size: 13px;
+  color: rgba(255,255,255,0.8);
+}
+
+.loginLinkBtn {
+  background: none;
+  border: 0;
+  color: rgba(255,255,255,0.9);
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+/* ---------- BUTTON ---------- */
+.loginBtn {
+  margin-top: 10px;
+  padding: 14px;
+  border-radius: 14px;
+  border: 0;
+  cursor: pointer;
+
+  background: rgba(0,0,0,0.6);
+  color: white;
+
+  box-shadow: 0 14px 30px rgba(0,0,0,0.35);
+}
+
+.loginBtn:hover {
+  background: rgba(0,0,0,0.7);
+}
+
+/* ---------- MOBILE ---------- */
+@media (max-width: 900px) {
+  .loginCard {
+    width: 100%;
+    min-width: unset;
+    box-shadow: none;
+  }
+}
+
+/* ---------- ALT TEXT (Login <-> Signup links) ---------- */
+.loginAltText {
+  margin: 14px 0 0;
+  font-size: 13px;
+  color: rgba(255,255,255,0.80);
+}
+
+.loginAltLink {
+  color: rgba(255,255,255,0.95);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* ---------- SIGNUP: FIRST/LAST NAME ROW ---------- */
+.nameRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.field {
+  display: grid;
+  gap: 8px;
+}
+
+/* ---------- SMALL POLISH ---------- */
+.loginInput,
+.loginBtn,
+.loginLinkBtn {
+  font-family: inherit;
+}
+
+.loginBtn:active {
+  transform: translateY(1px);
+}
+
+/* Make the checkbox not look tiny on some browsers */
+.loginCheckbox input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+}
+
+/* ---------- MOBILE TWEAKS ---------- */
+@media (max-width: 520px) {
+  .nameRow {
+    grid-template-columns: 1fr;
+  }
+
+  .loginHeader {
+    top: 16px;
+    left: 16px;
+    padding: 12px 14px;
+  }
+
+  .loginCard {
+    padding: 22px;
+  }
+}
